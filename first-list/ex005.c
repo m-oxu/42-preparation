@@ -6,7 +6,7 @@
 /*   By: moxu <dairenkonmajime@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 21:50:44 by moxu              #+#    #+#             */
-/*   Updated: 2022/09/18 15:24:58 by moxu             ###   ########.fr       */
+/*   Updated: 2022/09/18 15:26:49 by moxu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(void)
 		scanf("%f", &three_numbers[i]);
 		i++;
 	}
-	printf("%f", three_numbers[3]);
 	array_sorting_algorithm(three_numbers, size_array);
 	while (z < size_array)
 	{
