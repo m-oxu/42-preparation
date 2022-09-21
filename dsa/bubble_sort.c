@@ -87,10 +87,10 @@ of the array:
 
 				{5, 3, 2,  9,  0}
 				 |__| --> {3, 5, 2,  9,  0} [3 is less than 5]
-							  |__|--> {3, 2, 5,  9,  0} [2 is less than 5]
-											 |___| --> {3, 2, 5,  9,  0}
-																   |__|
-											{3, 2, 5,  0,  9}	<--
+					   |__|--> {3, 2, 5,  9,  0} [2 is less than 5]
+						       |___| --> {3, 2, 5,  9,  0}
+									    |__|
+							{3, 2, 5,  0,  9}  <--
 
 This process was only the first interaction. When we analyze the code,
 we can see this process:
@@ -110,25 +110,25 @@ anymore. it's like:
 	last_index {
 		first_index {
 			first_index + 1
+			}
 		}
-	}
-	|
-	|___> 	last_index {
+		|
+		|___> 	last_index {
 				first_index + 1 {
 					first_index + 2
+					}
 				}
-			}
-			|
-			|___> ... ---> 	last_index {
-								first_index + n {
-									first_index + z
-								}
+				|
+				|___> ... ---> 	last_index {
+							first_index + n {
+								first_index + z
 							}
-							|
+						     }
+						     |
 						<____|
-		last_index - 1 {
-					first_index + 1 {
-						first_index + 2
+			last_index - 1 {
+				first_index + 1 {
+					first_index + 2
 					}
 				}
 				and so on....
